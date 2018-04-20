@@ -8,7 +8,7 @@ const initialState = {
     isLoading: false,
     error: false,
     errorMessage: null,
-    data: null
+    data: []
 };
 
 const CryptoReducer = (state = initialState, action) => {
