@@ -41,4 +41,4 @@ const CryptoReducer = (state = initialState, action) => {
     }
 };
   
-export default LoginReducer;
+export default CryptoReducer;
