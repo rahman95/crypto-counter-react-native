@@ -19,7 +19,6 @@ class CryptoContainer extends Component {
                 key={coin.id}
                 name={coin.name}
                 symbol={coin.symbol}
-                rank={coin.rank}
                 price_usd={coin.price_usd}
                 percent_change_24h={coin.percent_change_24h}
                 percent_change_7d={coin.percent_change_7d}
