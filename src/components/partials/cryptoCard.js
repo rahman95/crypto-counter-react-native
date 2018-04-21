@@ -20,9 +20,15 @@ const CryptoCard = ({ name, symbol, price_usd, percent_change_24h, percent_chang
                     </Text>
                     <Text style={styles.price}>${price_usd}</Text>
                 </View>
-                <View style={styles.bottomContainer}> 
-                    <Text>{percent_change_24h}</Text>
-                    <Text>{percent_change_7d}</Text>
+                <View style={styles.bottomContainer}>
+                    <Text>
+                        <Text style={styles.title}>24 Hours: </Text>
+                        <Text style={percent_change_24h < 0 ? styles.negativeVal : styles.positiveVal }> {percent_change_24h}%</Text>
+                    </Text>
+                    <Text>
+                        <Text style={styles.title}>7 Days: </Text>
+                        <Text style={percent_change_7d < 0 ? styles.negativeVal : styles.positiveVal }> {percent_change_7d}%</Text>
+                    </Text>
                 </View>
             </View>
         </View>
@@ -56,7 +62,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     bottomContainer: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     title: {
         fontWeight: 'bold'
@@ -64,6 +71,12 @@ const styles = StyleSheet.create({
     price: {
         fontWeight: 'bold',
         color: '#007AFF'
+    },
+    positiveVal: {
+        color: '#27ae60'
+    },
+    negativeVal: {
+        color: '#c0392b'
     }
 })
 
